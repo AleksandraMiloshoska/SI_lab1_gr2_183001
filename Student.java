@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.List;
 
 class Student {
@@ -75,7 +76,43 @@ class Student {
 
 		return suma;
 
-		
+
 		//TODO
+	}
+}
+static class Faculty{
+	String ime;
+	List<Student>lista=new ArrayList<>();
+	int ocenka;
+
+
+	public Faculty(List<Student> lista,String ime,int ocenka) {
+		this.ime=ime;
+		this.lista = lista;
+		this.ocenka=ocenka;
+	}
+
+	public List<Student> getLista() {
+		return lista;
+	}
+
+	public void setLista(List<Student> lista) {
+		this.lista = lista;
+	}
+
+	public int getOcenka() {
+		return ocenka;
+	}
+
+	public void setOcenka(int ocenka) {
+		this.ocenka = ocenka;
+	}
+
+	public boolean polozil(){
+		if (ocenka>5){
+			return true;
+		}else {
+			return false;
+		}
 	}
 }
